@@ -13,7 +13,7 @@
     "clean": "rimraf lib dist es",
     "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min && npm run build:es",
     "prepublish": "npm run clean && npm run test && npm run build",
-    "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-core/register --reporter spec test/*.js",
+    "test": "jest",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack",
@@ -59,7 +59,7 @@
     "cross-env": "^1.0.7",
     "eslint": "^1.10.2",
     "eslint-config-airbnb": "1.0.2",
-    "mocha": "^2.2.5",
+    "jest": "^22.3.0",
     "rimraf": "^2.5.2",
     "webpack": "^1.12.14"
   }

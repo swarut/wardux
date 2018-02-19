@@ -1,6 +1,6 @@
 {
   "name": "wardux",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Warut's redux",
   "main": "lib/index.js",
   "files": [

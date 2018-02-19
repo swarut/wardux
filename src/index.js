@@ -18,9 +18,9 @@ export const createStore = (reducer) => {
 
     dispatch: function(action) {
       if (this.reducer) {
-        this.state = this.reducer(action, this.states)
+        this.states = this.reducer(this.states, action)
         this.subscribers.forEach((sub) => {
-          sub(this.state)
+          sub(this.states)
         })
       }
     }

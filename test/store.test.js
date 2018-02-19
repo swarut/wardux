@@ -1,7 +1,5 @@
-let sum = (a,b) => {
-  return a + b;
-}
+import { createStore } from '../src/index'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('createStore', () => {
+  expect(createStore).toBeTruthy
 });

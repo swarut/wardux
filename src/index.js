@@ -26,3 +26,13 @@ export const createStore = (reducer) => {
     }
   }
 }
+
+export const combineReducers = (reducers = {}) => {
+  let keys = Object.keys(reducers)
+
+  let combinedReducers = {}
+  keys.forEach((key) => {
+    combinedReducers[key] = reducers[key]
+  })
+  return combinedReducers
+}
